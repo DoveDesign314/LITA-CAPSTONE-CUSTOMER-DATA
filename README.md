@@ -48,43 +48,43 @@ The primary source of data used here was Customer Data.xlsx
 
 The Customer data used in this project consists of multiple columns that capture key information about sales transactions. Below is an explanation of each column in the dataset: 
 
-• CustomerId: A unique identifier assigned to each customer in the dataset, such as 201, 202 etc.
+• **CustomerId**: A unique identifier assigned to each customer in the dataset, such as 201, 202 etc.
 
-• Customer Name: The full name of the customer associated with the subscription, such as John, Jane, Alex etc.
+• **Customer Name**: The full name of the customer associated with the subscription, such as John, Jane, Alex etc.
 
-• Region: The geographical location or area where the customer resides or where the subscription is active, such as North, South, East and West.
+• **Region**: The geographical location or area where the customer resides or where the subscription is active, such as North, South, East and West.
 
-• Subscription Type: The category or level of subscription chosen by the customer (e.g., Basic, Premium and Standard). 
+• **Subscription Type**: The category or level of subscription chosen by the customer (e.g., Basic, Premium and Standard). 
 
-• Subscription Start: The date when the customer's subscription began. 
+• **Subscription Start**: The date when the customer's subscription began. 
 
-• Subscription End: The date when the customer's subscription is set to end or renew.
+• **Subscription End**: The date when the customer's subscription is set to end or renew.
 
-- Canceled: Indicates whether the subscription was canceled, typically as a "Yes" or "No" value.
+• **Canceled**: Indicates whether the subscription was canceled, typically as a "Yes" or "No" value.
 
-- Revenue: The total revenue generated from the customer’s subscription.
+• **Revenue**: The total revenue generated from the customer’s subscription.
 
 ### Key Insights from the Data 
 
 ---
 Here are some of the key insights derived from the customer subscription data:
 
-1. Top-Performing Regions: Identify which regions generate the highest revenue and have the most active subscriptions, helping target marketing and retention efforts more effectively.
+1. **Top-Performing Regions**: Identify which regions generate the highest revenue and have the most active subscriptions, helping target marketing and retention efforts more effectively.
 
-2. Popular Subscription Types: Analyze the distribution of subscription types (e.g., Basic, Premium) to understand customer preferences and identify high-value segments.
+2. **Popular Subscription Types**: Analyze the distribution of subscription types (e.g., Basic, Premium) to understand customer preferences and identify high-value segments.
 
-3. Revenue Trends: Track monthly revenue trends, highlighting periods with increased revenue or higher cancellations for possible seasonal patterns.
+3.** Revenue Trends**: Track monthly revenue trends, highlighting periods with increased revenue or higher cancellations for possible seasonal patterns.
 
-4. Subscription Lifecycle Analysis: Determine the average subscription duration across types, offering insight into how long customers typically remain subscribed before canceling or renewing.
+4. **Subscription Lifecycle Analysis**: Determine the average subscription duration across types, offering insight into how long customers typically remain subscribed before canceling or renewing.
 
-5. Behavioral Patterns in Cancellations: Investigate patterns in cancellations, such as whether they occur more often with specific subscription types, in certain regions, or after a certain duration.
+5. **Behavioral Patterns in Cancellations**: Investigate patterns in cancellations, such as whether they occur more often with specific subscription types, in certain regions, or after a certain duration.
 
-6. Revenue per Customer Segment: Segment customers by subscription type or region to determine which segments are the most profitable, guiding targeted strategies to increase revenue from high-value customers.
+6. **Revenue per Customer Segment**: Segment customers by subscription type or region to determine which segments are the most profitable, guiding targeted strategies to increase revenue from high-value customers.
 
 
 ### Tools Used 
 ---
-1.  Microsoft Excel [Download Here](https://www.microsoft.com/en-us/microsoft-365/excel)
+1.  **Microsoft Excel** [Download Here](https://www.microsoft.com/en-us/microsoft-365/excel)
 
 • For initial data cleaning, 
 
@@ -94,20 +94,22 @@ Here are some of the key insights derived from the customer subscription data:
 
 • For Data visualization. 
 
-2. Microsoft SQL Server [Download Here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+2. **Microsoft SQL Server** [Download Here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
    - Other SQL database you can use include MySQL: [Download MySQL](https://dev.mysql.com/downloads/), PostgreSQL: [Download PostgreSQL](https://www.postgresql.org/download/)
 
 • For data extraction 
 
 • For advanced querying from the sales database. 
 
-3.  Power BI [Downloaad Here](https://powerbi.microsoft.com/en-us/downloads/)
+3.  **Power BI** [Downloaad Here](https://powerbi.microsoft.com/en-us/downloads/)
 
 • For data visualization 
 
 • For dashboard creation. 
 
-4  Github for portfolio Building [Download Here](https://github.com/)
+4  **Github**  [Download Here](https://github.com/)
+- for portfolio Building
+  
 - From this page, you can sign up, create repositories, and explore open-source projects.
 
 
@@ -124,7 +126,7 @@ The sales data was first explored and cleaned in Excel. The following actions we
 
 • Basic exploratory analysis, such as Subscription Duration, Most popular subscription type, total revenue etc using pivot tables. 
 
-Key Steps: 
+**Key Steps**: 
 
 • Filtered sales data for the analysis period. 
 
@@ -132,10 +134,11 @@ Key Steps:
 
 • Calculated key metrics such as average subscription duration and total revenue by subscription type. 
 
+
 ### Formula Used 
 ---
 
-• Subscription Duration 
+• **Subscription Duration** 
 ```Excel
 =DATEDIF([Subscription Start], [Subscription End], "M")  // for months
 ```
@@ -149,9 +152,9 @@ F2 - Subscription End, E2 - Subscription Start
 ### Exploratory Data Analysis 
 ---
 The structured approach to perform Exploratory Data Analysis (EDA) on the customer subscription data in Excel include 
-1. Descriptive Statistics -Revenue Totals and Averages, Count and Frequency etc
-2. Trend Analysis - Revenue Over Time
-3. Segmentation Analysis -Use Pivot Tables to group by Subscription Type and calculate metrics like total revenue, average revenue per type. This helps understand which subscription types are most valuable.
+1. **Descriptive Statistics** -Revenue Totals and Averages, Count and Frequency etc
+2. **Trend Analysis** - Revenue Over Time
+3.** Segmentation Analysis** -Use Pivot Tables to group by Subscription Type and calculate metrics like total revenue, average revenue per type. This helps understand which subscription types are most valuable.
 
 EDA was used to explore and to answer some questions about the Data such as; 
 
@@ -167,9 +170,9 @@ EDA was used to explore and to answer some questions about the Data such as;
 
 After the initial data preparation, SQL was used to run more advanced queries on the dataset , allowing deeper insights. 
 
-Key SQL Queries: 
+**_Key SQL Queries**_: 
 
-• To find the top 3 regions by subscription cancellations
+• **To find the top 3 regions by subscription cancellations**
 ```SQL
 SELECT  Top (3) Region, COUNT(CustomerID) AS Cancellations
 FROM [dbo].[Customer Data]  WHERE Canceled = 'TRUE'
@@ -177,7 +180,7 @@ GROUP BY Region
 ORDER BY Cancellations DESC;
 ```
 
-• To calculate total revenue by subscription type
+• **To calculate total revenue by subscription type**
 ```SQL
 SELECT [SubscriptionType], SUM(CAST(REPLACE(LTRIM(RTRIM([Revenue])), ',', '') AS DECIMAL(10, 2))) AS TotalRevenue
 FROM [dbo].[Customer Data]
@@ -185,14 +188,14 @@ GROUP BY [SubscriptionType]
 ORDER BY TotalRevenue DESC
 ``` 
 
-• To retrieve the total number of customers from each region
+• **To retrieve the total number of customers from each region**
 ```SQL
 SELECT [Region], COUNT([CustomerID]) AS TotalCustomers
 FROM [dbo].[Customer Data]
 GROUP BY [Region];
 ```
 
-• To find the most popular subscription type by the number of customers
+• **To find the most popular subscription type by the number of customers**
 ```SQL
 SELECT [SubscriptionType], COUNT([CustomerID]) AS MostPopularSubscriptionType
 FROM [dbo].[Customer Data]
@@ -200,7 +203,7 @@ GROUP BY [SubscriptionType]
 ORDER BY MostPopularSubscriptionType DESC
 ```
 
-• To calculate the average subscription duration for all customers
+• **To calculate the average subscription duration for all customers**
 ```SQL
 SELECT AVG(DATEDIFF(day, [SubscriptionStart], [SubscriptionEnd])) 
 AS AverageSubscriptionDurationDays
@@ -274,3 +277,44 @@ b. Cancellations by Region or Customer name
 ### Pictorial Visuals of Analysis
 ---
 - **EXCEL**
+---
+- **MOST POPULAR SUBSCRIPTION TYPE**
+![MostPopularSubscriptionType](https://github.com/user-attachments/assets/ae9683c9-3a10-4693-990a-381179a7c746)
+
+- **CUSTOMER RETENTION RATE**
+![CustomerRetentionRate](https://github.com/user-attachments/assets/b356bbe0-79bb-4b14-b9d8-f83c483a6c8c)
+
+-**SUBSCRIPTION TYPE BY REGION**
+![SubscriptionTypebyRegion](https://github.com/user-attachments/assets/49e7475e-ce86-45d2-9cf7-e26305d98096)
+
+- **TOP REVENUE BY SUBSCRIPTION**
+![TopRevenuebySubscription](https://github.com/user-attachments/assets/e6a1732d-b85d-4175-a9fe-033648aa7c54)
+
+- **REVENUE TRENDS OVER TIME**
+![RevenueTrendsovertime](https://github.com/user-attachments/assets/72bb2e95-8425-45ab-af35-08d3cb9a809f)
+
+- **AVERAGE REVENUE BY CUSTOMER BY REGION**
+![AvgRevenuebyCustomerbyRegion](https://github.com/user-attachments/assets/362356aa-4182-4aef-be72-f48b0ffda03a)
+
+- **CUSTOMER DATA DASHBOARD**
+![CUSTOMER DATA DASHBOARD](https://github.com/user-attachments/assets/b5dee6d6-f6cb-445a-beac-26fe46d7e723)
+
+- **SQL**
+---
+- **TOTAL REVENUE BY SUBSCRIPTION TYPE**
+![TotalRevenuebySubscriptionType](https://github.com/user-attachments/assets/8e75634d-2a48-4a17-9fef-7ae4e17dcb7b)
+
+- **TOP 3 REGION BY SUBSCRIPTION CANCELLATION**
+![Top3RegionbySubscriptioncancellation](https://github.com/user-attachments/assets/9c04354e-84c9-4a49-b748-41d5a31def93)
+
+- **TOTAL REVENUE BY SUBSCRIPTION TYPE**
+![TotalRevenuebySubscriptionType](https://github.com/user-attachments/assets/5e1e7fd0-ca7b-4888-9301-2c68a1ba8557)
+
+- **AVERAGE SUBSCRIPTION FOR ALL CUSTOMERS**
+![AverageSubscriptionforAll](https://github.com/user-attachments/assets/c332b7b2-8656-47a7-988c-a3049cec4066)
+
+- **MOST POPULAR SUBSCRIPTION TYPE**
+![MostPopularSuscriptionType](https://github.com/user-attachments/assets/9392739b-5946-449e-9277-d8acf2037869)
+
+- **POWER BI**
+---
