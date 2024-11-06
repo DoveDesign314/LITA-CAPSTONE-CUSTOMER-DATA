@@ -147,14 +147,19 @@ F2 - Subscription End, E2 - Subscription Start
 
 ### Exploratory Data Analysis 
 ---
+The structured approach to perform Exploratory Data Analysis (EDA) on the customer subscription data in Excel include 
+1. Descriptive Statistics -Revenue Totals and Averages, Count and Frequency etc
+2. Trend Analysis - Revenue Over Time
+3. Segmentation Analysis -Use Pivot Tables to group by Subscription Type and calculate metrics like total revenue, average revenue per type. This helps understand which subscription types are most valuable.
 
-EDA involved exploring the data to answer some questions about the Data such as; 
+EDA was used to explore and to answer some questions about the Data such as; 
 
-• what is the overall sales trend? 
+• what is the total and average revenue per customer and per subscription type? 
 
-• which product are top selling? 
+• which subscription types are most popular? 
 
-• what are the products on peak sales? 
+• which subscription types generate the most revenue?
+
 
 ### 2. Data Analysis (SQL) 
 ---
