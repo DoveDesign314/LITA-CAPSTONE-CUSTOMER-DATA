@@ -168,27 +168,46 @@ After the initial data preparation, SQL was used to run more advanced queries on
 
 Key SQL Queries: 
 
-• To retrieve the total number of customers from each region 
+• To find the top 3 regions by subscription cancellations
+```SQL
+SELECT  Top (3) Region, COUNT(CustomerID) AS Cancellations
+FROM [dbo].[Customer Data]  WHERE Canceled = 'TRUE'
+GROUP BY Region
+ORDER BY Cancellations DESC;
+```
 
-SELECT Region, COUNT(CustomerID) AS TotalCustomers FROM CustomerData GROUP BY Region; 
+• To calculate total revenue by subscription type
+```SQL
+SELECT [SubscriptionType], SUM(CAST(REPLACE(LTRIM(RTRIM([Revenue])), ',', '') AS DECIMAL(10, 2))) AS TotalRevenue
+FROM [dbo].[Customer Data]
+GROUP BY [SubscriptionType]
+ORDER BY TotalRevenue DESC
+``` 
 
-• To find the number of sales transactions in each region. 
+• To retrieve the total number of customers from each region
+```SQL
+SELECT [Region], COUNT([CustomerID]) AS TotalCustomers
+FROM [dbo].[Customer Data]
+GROUP BY [Region];
+```
 
-Select Region,COUNT(OrderID) as NumOfTransactions from Sales Data Group by Region 
+• To find the most popular subscription type by the number of customers
+```SQL
+SELECT [SubscriptionType], COUNT([CustomerID]) AS MostPopularSubscriptionType
+FROM [dbo].[Customer Data]
+GROUP BY [SubscriptionType]
+ORDER BY MostPopularSubscriptionType DESC
+```
 
-• To find the highest-selling product by total sales value 
+• To calculate the average subscription duration for all customers
+```SQL
+SELECT AVG(DATEDIFF(day, [SubscriptionStart], [SubscriptionEnd])) 
+AS AverageSubscriptionDurationDays
+FROM [dbo].[Customer Data];
+```
 
-select top(1) PRODUCT, SUM([Total_sales])as TotalSales from [dbo].[Sales Data] group by PRODUCT order by TotalSales DESC 
-
-• To calculate the total revenue per product 
-
-Select PRODUCT, SUM([Total_sales]) as TotalRevenue from [dbo].[Sales Data] group by PRODUCT 
-
-• To find the top 5 customers by total purchase amount 
-
-select top(5) [Customer_Id], SUM ([Total_sales]) as TotalPurchaseAmount from [dbo].[Sales Data] group by [Customer_Id] order by TotalPurchaseAMount DESC 
-
-3. Data Visualization (Power BI) 
+### 3. Data Visualization (Power BI) 
+---
 
 DAX Measures for key insights were created: 
 
