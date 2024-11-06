@@ -1,2 +1,4 @@
-# LITA-CUSTOMER-DATA
-This project involves analyzing customer data for a subscription service to identify segments and trends. Your goal is to understand customer behavior, track subscription types, and identify key trends in cancellations and renewals. The final deliverable is a Power BI dashboard that presents your analysis. 
+# Customer Segmentation and Retention Analysis for Subscription Services
+
+### Project Overview
+This project aims to analyzes customer data in identifying key segments and behavioral trends within a subscription service. The objective is to explore customer behavior patterns, track different subscription types, and detect critical trends in cancellations and renewals. The deliverable is a Power BI dashboard that visualizes these insights, providing a comprehensive view of customer retention and segment-based performance.
