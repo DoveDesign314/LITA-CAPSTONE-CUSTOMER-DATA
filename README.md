@@ -1,6 +1,6 @@
 # Customer Segmentation and Retention Analysis for Subscription Services
 ---
-## Project Outline
+### Project Outline
 ---
 [Project Overview](#project-overview)
 
@@ -28,6 +28,7 @@
 
 [Key Findings](#key-findings)
 
+[Pictorial Visuals of Analysis](#pictorial-visuals-of-analysis)
 
 ### Project Overview
 ---
@@ -211,17 +212,17 @@ FROM [dbo].[Customer Data];
 
 DAX Measures for key insights were created: 
 
-• Total Subscriptions:
+• **Total Subscriptions**:
 ```DAX
 TotalSubscriptions = COUNTROWS('SubscriptionTable')
 ```
 
-• Canceled Subscriptions:
+• **Canceled Subscriptions**:
 ```DAX
 CanceledSubscriptions = CALCULATE(COUNTROWS('SubscriptionTable'), 'SubscriptionTable'[Status] = "Canceled")
 ```
 
-• Active Subscriptions:
+• **Active Subscriptions**:
 ```DAX
 ActiveSubscriptions = CALCULATE(COUNTROWS('SubscriptionTable'), 'SubscriptionTable'[Status] = "FALSE")
 ```
@@ -232,11 +233,11 @@ AvgSubscriptionDuration = AVERAGE('SubscriptionTable'[SubscriptionDurationInMont
 ---
 The final stage was to visualize the insights using Power BI. The interactive dashboard includes: 
 
-• Subscription Trends: Use a Line Chart to show trends over time:
+• **Subscription Trends**: Use a Line Chart to show trends over time:
 X-axis: Time (e.g., months, quarters, years).
 Y-axis: Total Subscriptions, New Subscriptions, Cancellations, or Total Revenue.
 
-• Revenue Breakdown: Use a Stacked Column Chart to display total revenue by Subscription Type or Region.
+• **Revenue Breakdown**: Use a Stacked Column Chart to display total revenue by Subscription Type or Region.
 
 • Cancellation Analysis: Use a Stacked Bar Chart or Clustered Bar Chart to display:
 a. Cancellations by Subscription Type.
@@ -245,28 +246,31 @@ b. Cancellations by Region or Customer name
 
 ### Key Findings 
 ---
-1. Most Popular Subscription Type
+1. **Most Popular Subscription Type**
    
 - Findings:The Basic subscription is the most popular, with a total value of ₦37,500, while Premium and Standard subscriptions are equally popular, each generating ₦18,750.
 - Inference: The higher adoption rate of the Basic subscription suggests that customers may prefer lower-cost options, possibly due to budget constraints or a perception that Basic provides sufficient value. This insight might indicate an opportunity to create upsell strategies for Basic subscribers who may be interested in additional features of higher-tier plans.
  
-2. Revenue Distribution by Subscription Type
+2. **Revenue Distribution by Subscription Type**
 
 - Finding: Basic subscriptions contribute the most to overall revenue, while Premium and Standard subscriptions contribute less, despite offering more features.
 - Inference: The revenue contribution from Basic subscriptions could mean a high volume of customers at this level, but it may also imply that Premium and Standard are not as attractive or that pricing does not justify their perceived value. Reviewing Premium and Standard subscription features or pricing could improve uptake and increase total revenue.
 
-3. Regional Performance and Customer Distribution
+3. **Regional Performance and Customer Distribution**
 
 - Finding: Certain regions have a higher concentration of customers, while others show fewer subscribers or higher cancellation rates. from our data the region with the highest concentration of customer was the South followed by West then East and North.
 - Inference: Regions with high customer concentrations are potential areas for targeted marketing and customer engagement. In regions with high cancellation rates, exploring reasons behind cancellations could uncover service gaps, pricing concerns, or competition, helping shape strategies to improve customer experience and retention.
 
-4. Seasonal Trends in Subscriptions
+4. **Seasonal Trends in Subscriptions**
 
 - Finding: The highest sales occurred in June, with a steady increase observed in the first quarter of the year.
 - Inference: Seasonal trends in new subscriptions suggest that marketing efforts may be especially effective during certain times of the year. 
 
-5. Customer Retention by Subscription type
+5. **Customer Retention by Subscription type**
 
 - Finding: Retention rates are highest among Basic subscription users, with Premium and Standard subscriptions showing comparatively lower retention.
 - Inference: Basic subscribers may feel that they receive good value for the cost, leading to higher satisfaction and loyalty. In contrast, the lower retention rates in Premium and Standard subscriptions might indicate that customers in these tiers do not see enough added value to justify the higher cost. This suggests a potential need to reassess the benefits or pricing of the Premium and Standard plans to increase their attractiveness and retain customers longer.
   
+### Pictorial Visuals of Analysis
+---
+- **EXCEL**
