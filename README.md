@@ -55,7 +55,7 @@ Here are some of the key insights derived from the customer subscription data:
 
 ### Tools Used 
 ---
-• Microsoft Excel [Download Here](https://www.microsoft.com/en-us/microsoft-365/excel)
+1.  Microsoft Excel [Download Here](https://www.microsoft.com/en-us/microsoft-365/excel)
 
 • For initial data cleaning, 
 
@@ -65,19 +65,19 @@ Here are some of the key insights derived from the customer subscription data:
 
 • For Data visualization. 
 
-• SQL [Download Here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+2. SQL [Download Here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) other database you
 
 • For data extraction 
 
 • For advanced querying from the sales database. 
 
-• Power BI Downloaad Here 
+3.  Power BI Downloaad Here 
 
 • For data visualization 
 
 • For dashboard creation. 
 
-• Github for portfolio Building Download Here 
+4  Github for portfolio Building Download Here 
 
 1. Data Cleaning and Preparation (Excel) 
 
