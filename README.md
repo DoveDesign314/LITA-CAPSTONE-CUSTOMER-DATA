@@ -1,5 +1,33 @@
 # Customer Segmentation and Retention Analysis for Subscription Services
 ---
+## Project Outline
+---
+[Project Overview](#project-overview)
+
+[Project Workflow](#project-workflow)
+
+[Data Source](#data-source)
+
+[Datasets and column definitions](datasets-and-column-definitions)
+
+[Key Insights from the Data](#key-insights-from-the-data)
+
+[Tools Used](#tools-used)
+
+[Data Cleaning and Preparation (Excel)](#data-cleaning-and-preparation)
+
+[Key steps](#key-steps)
+
+[Formula Used](#formula-used)
+
+[Exploratory Data Analysis](#exploratory-data-analysis)
+
+[Data Analysis (SQL)](#data-analysis-(sql))
+
+[Data Visualization (Power BI)](#data-visualization-(power-bi))
+
+[Key Findings](#key-findings)
+
 
 ### Project Overview
 ---
@@ -65,21 +93,25 @@ Here are some of the key insights derived from the customer subscription data:
 
 • For Data visualization. 
 
-2. SQL [Download Here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) other database you
+2. Microsoft SQL Server [Download Here](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
+   - Other SQL database you can use include MySQL: [Download MySQL](https://dev.mysql.com/downloads/), PostgreSQL: [Download PostgreSQL](https://www.postgresql.org/download/)
 
 • For data extraction 
 
 • For advanced querying from the sales database. 
 
-3.  Power BI Downloaad Here 
+3.  Power BI [Downloaad Here](https://powerbi.microsoft.com/en-us/downloads/)
 
 • For data visualization 
 
 • For dashboard creation. 
 
-4  Github for portfolio Building Download Here 
+4  Github for portfolio Building [Download Here](https://github.com/)
+- From this page, you can sign up, create repositories, and explore open-source projects.
 
-1. Data Cleaning and Preparation (Excel) 
+
+### 1. Data Cleaning and Preparation (Excel) 
+---
 
 The sales data was first explored and cleaned in Excel. The following actions were done: 
 
@@ -87,29 +119,34 @@ The sales data was first explored and cleaned in Excel. The following actions we
 
 • Handling missing variables, removing duplicates and formatting columns. 
 
-• Data validation to ensure consistency (e.g., correct product IDs, regional codes). 
+• Data validation to ensure consistency  
 
-• Basic exploratory analysis, such as calculating total sales, average revenue, average unit price etc using pivot tables. 
+• Basic exploratory analysis, such as Subscription Duration, Most popular subscription type, total revenue etc using pivot tables. 
 
 Key Steps: 
 
 • Filtered sales data for the analysis period. 
 
-• Created summary/pivot tables for product categories, regions, and sales channels. 
+• Created summary/pivot tables for subscription type categories, regions, and sales channels. 
 
-• Calculated key metrics such as average sales per product and total revenue by region. 
+• Calculated key metrics such as average subscription duration and total revenue by subscription type. 
 
-Formula Used 
+### Formula Used 
+---
 
-• Average sales per Product 
+• Subscription Duration 
+```Excel
+=DATEDIF([Subscription Start], [Subscription End], "M")  // for months
+```
+or 
+```Excel
+==F2 - E2
+```
+F2 - Subscription End, E2 - Subscription Start
 
-=AVERAGEIF(C2:C50001,C2,H2:H50001) 
 
-• Total revenue by Region 
-
-SUMIF(D3:D50002,D3,H3:H50002) 
-
-Exploratory Data Analysis 
+### Exploratory Data Analysis 
+---
 
 EDA involved exploring the data to answer some questions about the Data such as; 
 
@@ -119,7 +156,8 @@ EDA involved exploring the data to answer some questions about the Data such as;
 
 • what are the products on peak sales? 
 
-2. Data Analysis (SQL) 
+### 2. Data Analysis (SQL) 
+---
 
 After the initial data preparation, SQL was used to run more advanced queries on the dataset , allowing deeper insights. 
 
