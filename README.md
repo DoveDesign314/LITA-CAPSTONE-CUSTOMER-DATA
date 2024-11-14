@@ -295,8 +295,38 @@ b. Cancellations by Region or Customer name
 - **REVENUE TRENDS OVER TIME**
 ![RevenueTrendsovertime](https://github.com/user-attachments/assets/72bb2e95-8425-45ab-af35-08d3cb9a809f)
 
+Inference
+---
+1. **Monthly Revenue Performance**:
+June, February, and April recorded the highest revenue, each exceeding 15 million, indicating peak months with potentially increased customer engagement or higher sales.
+October, September, and December showed the lowest revenue, all below 7.5 million, suggesting these months had reduced activity or sales volume.
+2. **Revenue Distribution**:
+Revenue is unevenly distributed throughout the year, with high peaks and low troughs. The substantial difference between peak and low months might indicate a seasonal trend or fluctuations in customer demand.
+Months like June and February contribute significantly to the annual total, showing an upward trend in revenue during these periods.
+3. **Strategic Implications**:
+The business could focus on analyzing the factors contributing to high revenue in June, February, and April to replicate these successes in other months. Promotional events, marketing campaigns, or product launches during these periods could be reinforcing customer activity.
+For the lower-revenue months, especially October, September, and December, it may be beneficial to introduce special offers, holiday discounts, or targeted campaigns to boost revenue and reduce seasonal variability.
+Additionally, understanding customer behaviors and preferences during high-performing months could provide insights for strategic planning in less profitable months.
+   ** Conclusion**:
+The company should capitalize on peak revenue months with enhanced sales and marketing strategies while devising interventions for low-revenue months to improve consistency. This approach would allow for better revenue stability and maximize yearly performance.
+
 - **AVERAGE REVENUE BY CUSTOMER BY REGION**
 ![AvgRevenuebyCustomerbyRegion](https://github.com/user-attachments/assets/362356aa-4182-4aef-be72-f48b0ffda03a)
+
+Inference 
+---
+1. **Regional Performance**:
+South Region shows the highest average revenue per customer at 2,004, indicating that customers here may be purchasing higher-value subscriptions or spending more on services compared to other regions.
+East and North Regions have the lowest average revenue per customer (1,994 and 1,993, respectively), suggesting a lower engagement or preference for basic services.
+2. **Revenue Distribution**:
+Revenue is unevenly distributed across regions, with the South contributing the most on a per-customer basis, while East and North regions are relatively lower.
+The West Region has a moderate performance with an average revenue per customer of 1,999, slightly below the South but above the East and North.
+3. **Strategic Implications**:
+The South Region could be a focus area for premium services or up-selling opportunities due to higher spending by its customers.
+The East and North Regions may require targeted marketing efforts or promotional strategies to increase customer engagement and revenue. Introducing offers, discounts, or incentives in these regions could potentially drive up average revenue per customer.
+For the West Region, maintaining existing customer satisfaction while exploring cross-selling opportunities could help sustain or slightly increase revenue.
+4. **Conclusion**:
+The data suggests prioritizing the South Region for high-revenue growth strategies and considering specific customer acquisition or engagement strategies in the East and North. Focusing on these tailored approaches could help the company enhance regional revenue distribution and overall performance.
 
 - **CUSTOMER DATA DASHBOARD**
 ![CUSTOMER DATA DASHBOARD](https://github.com/user-attachments/assets/b5dee6d6-f6cb-445a-beac-26fe46d7e723)
@@ -305,6 +335,24 @@ b. Cancellations by Region or Customer name
 ---
 - **TOTAL REVENUE BY SUBSCRIPTION TYPE**
 ![TotalRevenuebySubscriptionType](https://github.com/user-attachments/assets/8e75634d-2a48-4a17-9fef-7ae4e17dcb7b)
+
+Inference
+---
+1. **Revenue Distribution by Subscription Type**:
+The Basic subscription generates the highest revenue at $74,756,784.00, which aligns with its popularity among customers.
+The Premium subscription generates $37,580,782.00, contributing about half of the revenue from Basic but still significant.
+The Standard subscription generates $37,482,120.00, almost identical to Premium in terms of revenue. This shows that Premium and Standard are similarly valuable in revenue terms, despite possible differences in customer count or price points.
+2. **Implications for Regional Performance**:
+Although this result doesn’t directly show regional performance, the next steps could involve analyzing how each region contributes to these subscription types. Understanding where Basic, Premium, and Standard subscriptions are most popular across regions would offer actionable insights.
+Regions with higher cancellations (referenced in the query but not shown in the results) could indicate areas where retention efforts are needed, especially for lower-revenue subscriptions.
+3. **Strategic Implications**:
+Focus on Upselling: Since Basic has the highest revenue but might be the lowest-priced option, there’s potential for upselling Basic subscribers to Premium or Standard to maximize revenue per user.
+Retention Programs: High revenue from Basic subscriptions suggests a large customer base, which may have higher churn. Strategies aimed at retaining Basic subscribers could stabilize and possibly grow this revenue stream.
+Product Enhancement for Premium and Standard: Given that Premium and Standard generate similar revenue, understanding the unique benefits each tier offers could allow the company to refine these tiers to increase their attractiveness and distinctiveness.
+4. **Conclusion**:
+The data highlights the importance of the Basic subscription as a core revenue driver. While Premium and Standard contribute similar revenue amounts, additional segmentation or feature enhancement might create opportunities for growth.
+Overall, optimizing the Basic tier to reduce churn while making Premium and Standard tiers more appealing through added benefits or targeted marketing could provide balanced growth across all subscription types.
+
 
 - **TOP 3 REGION BY SUBSCRIPTION CANCELLATION**
 ![Top3RegionbySubscriptioncancellation](https://github.com/user-attachments/assets/9c04354e-84c9-4a49-b748-41d5a31def93)
@@ -317,6 +365,21 @@ b. Cancellations by Region or Customer name
 
 - **MOST POPULAR SUBSCRIPTION TYPE**
 ![MostPopularSuscriptionType](https://github.com/user-attachments/assets/9392739b-5946-449e-9277-d8acf2037869)
+
+Inference
+---
+1. **Subscription Popularity**:
+The Basic subscription is the most popular, with 37,500 customers, significantly higher than the other types.
+Both the Premium and Standard subscriptions have an equal number of customers, 18,750 each, indicating a balanced interest between these two tiers but less than half the customer base of the Basic subscription.
+2. **Revenue Implications**:
+Since the Basic subscription has the highest number of customers, it is likely a major contributor to the total revenue. However, if Basic is a lower-priced option, the overall revenue per customer may be lower compared to Premium or Standard tiers.
+Premium and Standard subscriptions, while less popular, might contribute higher per-customer revenue. Therefore, encouraging upgrades from Basic to these tiers could increase total revenue without requiring as many new customers.
+3. **Strategic Implications**:
+Retention and Upselling: The organization could explore targeted marketing strategies to encourage Basic customers to upgrade to Premium or Standard, possibly through value-added features or promotional discounts.
+Customer Insights: Understanding why customers prefer the Basic subscription could reveal insights into customer needs and preferences. This data could be used to enhance features in higher-tier subscriptions to make them more appealing.
+Customer Segmentation: Since Basic has such a high customer count, segmenting this group further could allow for customized campaigns aimed at increasing loyalty and reducing churn, especially if the Basic tier experiences higher turnover.
+4. **Conclusion**:
+The Basic subscription’s popularity indicates it appeals to a broad customer base, possibly due to affordability or basic service needs. However, to drive revenue growth, the organization should consider strategies to enhance the appeal of Premium and Standard options. By promoting upgrades and focusing on customer retention within the Basic tier, the company can achieve a more balanced revenue distribution and improve long-term profitability.
 
 - **POWER BI**
 ---
@@ -333,7 +396,7 @@ SHOWING THE FOLLOWING INDICATORS
 
 SUBSCRIPTION TRENDS
 ---
-**ACTIVE SUBSCRIPTION BY REGION (RIGHT)**     AND      ** CANCELED SUBSCRIPTION BY SUBSCRIPTION TYPE (L**EFT)
+**ACTIVE SUBSCRIPTION BY REGION (RIGHT)**     AND      **CANCELED SUBSCRIPTION BY SUBSCRIPTION TYPE (LEFT)**
 ![ACTIVE SUBSCRIPTION BY REGION ](https://github.com/user-attachments/assets/1e20ff78-bb1c-4b73-bb5a-70df495e0722)
 
 **ACTIVE SUBSCRIPTION BY SUBSCRIPTION TYPE (LEFT)**     AND **CANCELED SUBSCRIPTION BY REGION  (RIGHT)**
